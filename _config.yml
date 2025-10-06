@@ -14,12 +14,11 @@ timezone: Asia/Shanghai
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: PoweredByAlgo # the main title
+title: PBA # the main title
 
-tagline: 算法驱动 # it will display as the subtitle
+tagline: PoweredByAlgo # it will display as the subtitle
 
-description: >- # used by seo meta and the atom feed
-  一个简洁、响应式且功能丰富的Jekyll技术写作主题。
+description: 一个简洁、响应式且功能丰富的Jekyll技术写作主题。
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -34,12 +33,12 @@ twitter:
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
-  name: 算法驱动
-  email: example@domain.com # change to your email address
+  name: PoweredByAlgo
+  email: PoweredByAlgo@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/username # change to your Twitter homepage
-    - https://github.com/username # change to your GitHub homepage
+    - https://twitter.com/poweredbyalgo # change to your Twitter homepage
+    - https://github.com/poweredbyalgo # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
     # - https://www.linkedin.com/in/username
@@ -98,7 +97,7 @@ theme_mode: light # [light | dark]
 cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar:
+avatar: /assets/img/avatar.jpg
 
 # The URL of the site-wide social preview image used in SEO `og:image` meta tag.
 # It can be overridden by a customized `page.image` in front matter.
