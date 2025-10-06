@@ -1,0 +1,98 @@
+# Chinese (Simplified) locale for Chirpy theme
+# 中文（简体）本地化文件
+
+# Layout
+layout:
+  post:
+    updated: 更新于
+    read_time: 阅读时间
+    words: 字
+    toc: 目录
+  page:
+    share: 分享
+    related_posts: 相关文章
+
+# UI elements
+ui:
+  nav:
+    home: 首页
+    archives: 归档
+    categories: 分类
+    tags: 标签
+    about: 关于
+  button:
+    read_more: 阅读更多
+    back_to_top: 回到顶部
+  search:
+    placeholder: 搜索文章...
+    cancel: 取消
+
+# Footer
+footer:
+  powered_by: 由 %s 驱动
+  theme: 主题
+  customized: 自定义
+
+# Posts
+posts:
+  date_format:
+    long: '%Y年%m月%d日'
+    short: '%m月%d日'
+  categories: 分类
+  tags: 标签
+  pin: 置顶
+  more_posts: 更多文章
+
+# Archive page
+archive:
+  total_posts: 共 %d 篇文章
+  counter: 篇
+
+# Categories page
+categories:
+  total: 共 %d 个分类
+
+# Tags page
+tags:
+  total: 共 %d 个标签
+
+# Notification
+notification:
+  update_found: 发现新版本
+  update: 更新
+  dismiss: 忽略
+
+# Comments
+comments:
+  title: 评论
+  placeholder: 留下您的评论...
+  submit: 提交
+  loading: 加载中...
+
+# 404 page
+not_found:
+  title: 页面未找到
+  prompt: 抱歉，您访问的页面不存在
+  back_home: 返回首页
+
+# Time format
+time:
+  minute: 分钟
+  hour: 小时
+  day: 天
+  week: 周
+  month: 月
+  year: 年
+
+# Pagination
+pagination:
+  previous: 上一页
+  next: 下一页
+
+# Share
+share:
+  caption: 分享到
+
+# Meta description
+meta:
+  description: 一个简洁、响应式且功能丰富的Jekyll技术写作主题
