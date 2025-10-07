@@ -1,6 +1,7 @@
 ---
 title: 第一次工作分享！
 tags: [工作分享, Vibe Coding]
+comments: true
 ---
 
 # Github Pages

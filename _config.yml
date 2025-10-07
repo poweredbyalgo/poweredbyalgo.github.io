@@ -22,22 +22,22 @@ description: 一个简洁、响应式且功能丰富的Jekyll技术写作主题�
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: ""
+url: "https://poweredbyalgo.github.io"
 
 github:
-  username: github_username # change to your GitHub username
+  username: poweredbyalgo # change to your GitHub username
 
 twitter:
-  username: twitter_username # change to your Twitter username
+  username: night2eight # change to your Twitter username
 
 social:
   # Change to your full name.
   # It will be displayed as the default author of the posts and the copyright owner in the Footer
   name: PoweredByAlgo
-  email: PoweredByAlgo@gmail.com # change to your email address
+  email: poweredbyalgo@gmail.com # change to your email address
   links:
     # The first element serves as the copyright owner's link
-    - https://twitter.com/poweredbyalgo # change to your Twitter homepage
+    - https://twitter.com/night2eight # change to your Twitter homepage
     - https://github.com/poweredbyalgo # change to your GitHub homepage
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
@@ -87,7 +87,7 @@ pageviews:
 #     light — Use the light color scheme
 #     dark — Use the dark color scheme
 #
-theme_mode: light # [light | dark]
+theme_mode: # [light | dark]  不配置就可自由选择，默认跟随系统主题
 
 # The CDN endpoint for media resources.
 # Notice that once it is assigned, the CDN url
@@ -108,7 +108,7 @@ toc: true
 
 comments:
   # Global switch for the post-comment system. Keeping it empty means disabled.
-  provider: # [disqus | utterances | giscus]
+  provider: giscus # [disqus | utterances | giscus]
   # The provider options are as follows:
   disqus:
     shortname: # fill with the Disqus shortname. › https://help.disqus.com/en/articles/1717111-what-s-a-shortname
@@ -118,15 +118,18 @@ comments:
     issue_term: # < url | pathname | title | ...>
   # Giscus options › https://giscus.app
   giscus:
-    repo: # <gh-username>/<repo>
-    repo_id:
-    category:
-    category_id:
-    mapping: # optional, default to 'pathname'
-    strict: # optional, default to '0'
-    input_position: # optional, default to 'bottom'
-    lang: # optional, default to the value of `site.lang`
-    reactions_enabled: # optional, default to the value of `1`
+    repo: poweredbyalgo/poweredbyalgo.github.io # <gh-username>/<repo>
+    repo_id: R_kgDOP5bNog
+    category: Announcements
+    category_id: DIC_kwDOP5bNos4CwWHG
+    mapping: pathname # optional, default to 'pathname'
+    strict: 0 # optional, default to '0'
+    input_position: top # optional, default to 'bottom'
+    lang: zh-CN # optional, default to the value of `site.lang`
+    reactions_enabled: 1 # optional, default to the value of `1`
+    theme: preferred_color_scheme # 跟随系统主题设置
+    loading: lazy
+    crossorigin: anonymous
 
 # Self-hosted static assets, optional › https://github.com/cotes2020/chirpy-static-assets
 assets:
@@ -229,3 +232,10 @@ jekyll-archives:
   permalinks:
     tag: /tags/:name/
     category: /categories/:name/
+
+plugins:
+  - jekyll-sitemap  # 确保这行存在，无注释
+
+sitemap:
+  changefreq: always  # 页面更新频率（always/daily/weekly/monthly/yearly/never）
+  priority: 1.0       # 页面优先级（0.0-1.0，首页建议设1.0）
