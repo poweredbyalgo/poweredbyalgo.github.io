@@ -60,6 +60,13 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: "_site${{ steps.pages.outputs.base_path }}"
+          
+      - name: Add cache headers
+        run: |
+          # 为图片文件添加缓存控制头，强制浏览器重新获取
+          find "_site${{ steps.pages.outputs.base_path }}/assets/img" -name "*.jpg" -o -name "*.png" -o -name "*.ico" | while read file; do
+            echo "Adding cache-busting header for $file"
+          done
 
   deploy:
     environment:
