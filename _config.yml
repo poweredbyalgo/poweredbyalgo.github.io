@@ -22,7 +22,7 @@ description: 一个简洁、响应式且功能丰富的Jekyll技术写作主题�
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
-url: "https://poweredbyalgo.github.io"
+url: "https://poweredbyalgo.top"
 
 github:
   username: poweredbyalgo # change to your GitHub username
