@@ -20,7 +20,7 @@ comments: true
 
 打开 Ubuntu 终端运行以下命令：
 
-```
+```bash
 sudo apt update
 sudo apt install xfce4 -y #第2步：配置 XRDP 使用 XFCE
 ```
@@ -39,7 +39,7 @@ sudo apt install xfce4 -y #第2步：配置 XRDP 使用 XFCE
 
 在您的Ubuntu终端中，使用 `nano` 编辑器打开这个文件：
 
-```
+```bash
 sudo nano /etc/xrdp/startwm.sh
 ```
 
@@ -47,7 +47,7 @@ sudo nano /etc/xrdp/startwm.sh
 
 在最后两行（通常是 `test -x ...` 和 `exec ...` 这两行）注释掉（在行首加 `#`），然后添加 `startxfce4`，像这样：
 
-```
+```bash
 # ... 文件其他内容 ...
 
 # Comment out the original lines:
@@ -62,7 +62,7 @@ startxfce4
 
 为了让配置生效，需要重启 `xrdp` 服务：
 
-```
+```bash
 sudo systemctl restart xrdp
 ```
 
@@ -76,7 +76,7 @@ sudo systemctl restart xrdp
 
 确保 Ubuntu 的防火墙没有阻止远程桌面连接的端口（默认为 `3389`）。
 
-```
+```bash
 # 允许 3389 端口的TCP连接
 sudo ufw allow 3389/tcp
 
@@ -88,7 +88,7 @@ sudo ufw reload
 
 确认 `xrdp` 服务是否正在正常运行。
 
-```
+```bash
 sudo systemctl status xrdp
 ```
 
@@ -98,6 +98,6 @@ sudo systemctl status xrdp
 
 极少数情况下，可能是文件权限问题。确保 `.xsession` 文件是可读的。
 
-```
+```bash
 ls -l ~/.xsession
 ```
