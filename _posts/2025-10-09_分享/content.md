@@ -1,5 +1,5 @@
 ---
-title: 安装系统
+title: 通过U盘安装操作系统
 tags: [工作分享, 安装系统]
 comments: true
 ---
