@@ -47,7 +47,7 @@ toc: true
 ### 存在的问题
 
 - push时会同时触发两个工作流，容易出现因竞争导致deploy失败
-- 若`pages-build-deployment`在` Build and Deploy `后执行，则会覆盖正确的deploy结果，导致Github Pages无法访问
+- 若`pages-build-deployment`在`Build and Deploy`后执行，则会覆盖正确的deploy结果，导致Github Pages无法访问
 
 ![image-20251010212649188](pic/image-20251010212649188.png)
 
