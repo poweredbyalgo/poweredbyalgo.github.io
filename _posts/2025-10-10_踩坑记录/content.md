@@ -40,7 +40,7 @@ toc: true
 
 - `pages-build-deployment`为Github Pages默认工作流且无法被禁用
 
-- ` Build and Deploy `为项目自定义的工作流，对应`.github/workflows/pages-deploy.yml`
+- `Build and Deploy`为项目自定义的工作流，对应`.github/workflows/pages-deploy.yml`
 
 ![image-20251010211724112](pic/image-20251010211724112.png)
 
