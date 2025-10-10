@@ -94,5 +94,4 @@ share:
   caption: 分享到
 
 # Meta description
-meta:
-  description: 一个简洁、响应式且功能丰富的Jekyll技术写作主题
+meta: 使用 :PLATFORM 平台的 :THEME 主题
