@@ -2,6 +2,7 @@
 title: Windows远程桌面连接Ubuntu24.04
 tags: [工作分享, RDP, XFCE]
 comments: true
+toc: true
 ---
 
 # 问题：连接闪退
