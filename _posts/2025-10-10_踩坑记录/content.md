@@ -9,7 +9,7 @@ toc: true
 
 ## 创建自定义JS脚本与CSS样式文件
 
-![image-20251010211203738](./pic/image-20251010211203738.png)
+![image-20251010211203738](pic/image-20251010211203738.png)
 
 ## 创建自定义html引入JS脚本与CSS样式文件
 
@@ -42,14 +42,14 @@ toc: true
 
 - ` Build and Deploy `为项目自定义的工作流，对应`.github/workflows/pages-deploy.yml`
 
-![image-20251010211724112](./pic/image-20251010211724112.png)
+![image-20251010211724112](pic/image-20251010211724112.png)
 
 ## 存在的问题
 
 - push时会同时触发两个工作流，容易出现因竞争导致deploy失败
 - 若`pages-build-deployment`在` Build and Deploy `后执行，则会覆盖正确的deploy结果，导致Github Pages无法访问
 
-![image-20251010212649188](./pic/image-20251010212649188.png)
+![image-20251010212649188](pic/image-20251010212649188.png)
 
 ## 解决办法
 
@@ -57,7 +57,7 @@ toc: true
 
 配置选择Github Actions后就只会使用自定义的工作流，`pages-build-deployment`就不会被触发啦~
 
-![image-20251010212821809](./pic/image-20251010212821809.png)
+![image-20251010212821809](pic/image-20251010212821809.png)
 
 # Ubuntu24.04 配置Docker镜像源失败
 
