@@ -1,6 +1,6 @@
 ---
 title: 学习记录——LangChain Academy Deep Agents with LangGraph 01
-tags: [学习记录, LangChain]
+tags: [学习记录, LangChain, 踩坑记录]
 comments: true
 toc: true
 ---
@@ -337,8 +337,6 @@ async def stream_agent(agent, query, config=None):
 
 这种设计实现了状态更新与业务逻辑的分离，使工具代码更加清晰，同时保持了状态管理的一致性。
 
----
-
 ### 问题2：`Annotated[List[str], reduce_list]`的含义是什么？
 
 `Annotated[List[str], reduce_list]`是Python中的一种类型注解，结合了`typing`模块的`Annotated`和自定义的`reduce_list`函数，用于控制LangGraph中状态更新的行为。
@@ -380,8 +378,6 @@ async def stream_agent(agent, query, config=None):
 
 这种模式在LangGraph中非常常见，用于实现状态的累积和合并，而不是简单的覆盖。
 
----
-
 ### 问题3：`Annotated`的第二个参数为reducer是否是LangGraph的约定？
 
 是的，`Annotated`的第二个参数为reducer是LangGraph的明确约定和核心特性。这是LangGraph状态管理的关键设计模式。
@@ -422,8 +418,6 @@ async def stream_agent(agent, query, config=None):
    LangGraph官方文档明确推荐这种模式，并在多个示例中使用它来实现各种状态管理需求，如消息历史累积、操作记录等。
 
 因此，将`Annotated`的第二个参数用作reducer是LangGraph框架的核心约定，是开发者应该遵循的标准模式。
-
----
 
 ### 问题4：`InjectedToolCallId`和`InjectedState`是如何实现的？
 
@@ -486,8 +480,6 @@ async def stream_agent(agent, query, config=None):
 
 这种设计模式使得工具可以访问上下文信息（如状态和工具调用ID），同时保持工具接口的简洁性，并且不会暴露这些内部细节给LLM。这是LangGraph实现高级代理功能的关键机制之一。
 
----
-
 ### 总结
 
 LangChain/LangGraph的注入机制是一套精心设计的系统，通过类型注解和标记类实现了：
@@ -497,3 +489,8 @@ LangChain/LangGraph的注入机制是一套精心设计的系统，通过类型�
 3. **状态更新控制**：通过`Annotated`和reducer函数控制状态更新策略
 
 这些机制共同工作，使开发者能够构建复杂的代理系统，同时保持代码的清晰和可维护性。
+
+## 踩坑记录
+
+1. Markdown正文中不能出现`---`，否则渲染出的文章会被截断，从最后一个`---`开始及以后内容才会被渲染。
+2. 在Window宿主机中开启全局代理后即使关掉代理再重启wsl2仍会影响LangChain去请求API，即使curl请求模型API正常。最好的办法就是关闭代理开启自启动，然后重启电脑。
